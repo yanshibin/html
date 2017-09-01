@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Like a cat</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="animate.css">
+        <link href="css/hover-min.css" rel="stylesheet" media="all">
+<style>
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@font-face {font-family: 'iconfont';
+    src: url('css/iconfont.eot'); /* IE9*/
+    src: url('css/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('css/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('css/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('css/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+.bg{
+    background-color: #2ea6ff;
+    background-image: url('images/bgimg.jpg');
+    position: absolute;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+.float{
+    float: left;
+}
+.blur{
+    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    -webkit-filter: blur(3px); /* Chrome, Opera */
+       -moz-filter: blur(3px);
+        -ms-filter: blur(3px);    
+            filter: blur(3px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShadow=false); /* IE6~IE9 */
+}
+.logo{
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: rgba(255,255,255,0.5) solid 5px;
+            transition: border,rotate 1s,1s;
+    -webkit-transition: border,rotate 1s,1s;
+}  
+.logo:hover{
+    border: rgba(255,255,255,0.9) solid 50px;
+}
+
+.row{
+    background-color:rgba(166, 206, 255, 0.4);
+    width: 100vw;
+    height: 100vh;
+}
+.main{
+    padding-top: 10%;
+    width: 980px;
+    float: none;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+.bottom{
+    width: 50%;
+    float: none;
+    display: block;
+    padding-top: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+i{
+    font-size: 80px;
+    color: #333;
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    display: inline-block;
+    transition: color 2s;
+    -webkit-transition: color 2s;
+    cursor: hand;
+    cursor: pointer;
+}
+i:hover{
+    color: #e0e0e0;
+    transition: color 2s;
+    -webkit-transition: color 2s;
+}
+p{
+    text-align: center;
+}
+span{
+    padding-top: 5px;
+    font-size: 80px;
+    margin: 0;
+    margin-bottom: -30px;
+    font-family: 'Open Sans', sans-serif;
+        transition: color 2s;
+    -webkit-transition: color 2s;
+}
+span:hover{
+    color: #e0e0e0;
+    transition: color 2s;
+    -webkit-transition: color 2s;
+    cursor: default;
+}
+</style>
+<script type="text/javascript"> 
+function test(obj){
+//下面这种方式用来检测到底是哪个空间触发的事件的工具
+  if(obj.id=="github"){
+      self.location='https://github.com/yanshibin'; 
+      out();
+  }else{
+      self.location='https://vastaya.com'; 
+      out();
+}
+}
+function out(){
+    var div=document.getElementById('main');
+      div.className += " animated bounceOut";
+}
+</script>
+</head>
+    <body>
+        <div class="container float bg">
+            <div class="float blur "></div>
+            <div class="row animated slideInDown" >
+                <div class="main" id="main">
+                        <img class="logo img-circle hvr-rotate" src="images/image.gif"/>
+                        <p><span>Be a cat</span></p>
+                    <p style="     font-size: 2em;           "><a href="cat.html" style="     color: #333; ">Hola</a></p>   
+                    <div class="bottom "  >
+                            <a id="github"  onclick="test(this)"><i class="iconfont" title="github">&#xe600;</i></a>
+                            <a id=""  onclick="test(this)"><i class="iconfont" title="">&#xe717;</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
